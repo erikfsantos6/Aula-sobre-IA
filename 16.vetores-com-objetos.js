@@ -36,3 +36,20 @@ const maioridade = listaDeUsuarios.filter(usuario => usuario.idade >= 18)
 maioridade.forEach(usuario => 
     console.log(`${usuario.nome} tem ${usuario.idade} anos.`)
 )
+
+// 2. Na lista de números, filtre e mostre apenas números pares
+console.log("\nNa lista de números, filtre e mostre apenas numeros pares.")
+const numerosPares = listaDeNumeros.filter(numero => numero % 2 === 0)
+console.log(numerosPares)
+
+// 3. Na lista de nomes, mostre todos os nomes com forEach
+console.log("\nNa lista de nomes, mostre todos os nomes com forEach.")
+listaDeNomes.forEach(nome => {
+    console.log(nome)
+})
+
+// 4. Na lista de usuários, mostre apenas os nomes
+console.log("\nNa lista de usuários, mostre apenas os nomes.")
+listaDeUsuarios.forEach(usuario => {
+    console.log(usuario.nome)
+})
