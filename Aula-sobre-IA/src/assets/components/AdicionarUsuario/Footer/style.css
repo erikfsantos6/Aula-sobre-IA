@@ -1,45 +1,29 @@
-import {useState} from "react"
-import "./style.css"
+.container {
+  text-align: center;
+  font-family: Arial;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
 
-export default function AdicionarUsuario() {
-    const [nome,setnome] = useState("")
-    const [email,setemail] = useState("")
-    const [listaDeUsuario, setlistaDeUsuario] = useState([])
+h1 {
+  color: black;
+}
 
-    const handlerAdicionarUsuario = (event) => {
-        event.preventDefault()
+input {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  width: 200px;
+}
 
-        if (nome && email) {
-            setlistaDeUsuario ([...listaDeUsuario, { nome, email }])
-            
-            setnome("")
-            setemail("")
-        }
-    }
-    
-    return (
-        <div className="formulario">
-            <h2>Adicionar Usuário</h2>
-            <form onSubmit={handlerAdicionarUsuario}>
-                <input
-                    type="text"
-                    placeholder="Nome"
-                    value={nome}
-                    onChange = {(e) => setnome(e.target.value)}/>
+button {
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
 
-                    <button type="submit">Adicionar</button>
-            </form>
-
-            <hr />
-
-            <h2>Usuários Adicionados</h2>
-            <ul>
-                {listaDeUsuario.map((usuario, index) => (
-                    <li key={index}>
-                    {usuario.nome} - {usuario.email}
-                    </li>
-                ))}
-            </ul>
-        </div>    
-    )
+button:hover {
+  background-color: gray;
 }

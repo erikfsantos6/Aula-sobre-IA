@@ -1,10 +1,20 @@
 import './App.css'
+import Header from '../components/Header'
+import AdicionarUsuario from '../components/AdicionarUsuario'
+import Footer from '../components/Footer'
 
 function App() {
   
+
   return (
     <>
-    <h1>meu projeto</h1>
+      <div className="App">
+        <Header/>
+        <main>
+          <AdicionarUsuario/>
+        </main>
+        <Footer/>
+      </div>
     </>
   )
 }
