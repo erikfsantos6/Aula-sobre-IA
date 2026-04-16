@@ -1,0 +1,25 @@
+version: '3.8' # Versão do Compose
+
+services:
+  web:
+    build: .                # Constrói o Dockerfile no diretório atual
+    ports:
+      - "3000:3000"         # Mapeia porta host:container
+    volumes:
+      - ./app:/usr/src/app  # Sincroniza código local (hot-reload)
+      - /usr/src/app/node_modules # Impede sobrescrever node_modules do container
+    depends_on:
+      - db                  # Inicia o db antes da app
+    environment:
+      DB_HOST: db
+
+  db:
+    image: postgres:15-alpine # Imagem pronta do Docker Hub
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+    volumes:
+      - pgdata:/var/lib/postgresql/data # Persistência de dados
+
+volumes:
+  pgdata: # Volume nomeado para salvar dados do banco

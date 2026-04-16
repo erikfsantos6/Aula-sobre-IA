@@ -1,0 +1,89 @@
+/* Reseta as margens padrão do navegador */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Fundo da tela inteira */
+body {
+  background-color: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* A caixa principal (container) */
+.container {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
+  /* Detalhe com a cor preta do Santos no topo */
+  border-top: 6px solid #000000; 
+}
+
+/* Títulos e Textos */
+h1 {
+  color: #000000;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+h2 {
+  color: #333333;
+  font-size: 1.3rem;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+p {
+  color: #555555;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Organizando o Formulário */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Espaço entre os campos */
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Caixas de texto (Inputs) */
+input {
+  padding: 12px;
+  border: 1px solid #cccccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  outline: none;
+  border-color: #000000;
+}
+
+/* Botão de Adicionar */
+button {
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  padding: 14px;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #333333;
+}

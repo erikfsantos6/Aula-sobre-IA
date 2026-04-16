@@ -1,8 +1,7 @@
 import './App.css'
-import Header from '../components/Header'
-import AdicionarUsuario from '../components/AdicionarUsuario'
-import Footer from '../components/Footer'
-
+import Header from "./components/Header";
+import AdicionarUsuario from "./components/AdicionarUsuario";
+import Footer from "./components/Footer"
 function App() {
   
 

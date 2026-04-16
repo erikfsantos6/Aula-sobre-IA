@@ -1,6 +1,7 @@
 import { useState } from "react";
-import "./style.css";
-import Footer from "./Footer";
+import "./App.css";
+// Importamos o seu componente correto aqui:
+import AdicionarUsuario from "./components/AdicionarUsuario";
 
 export default function App() {
   const [nome, setNome] = useState("");
@@ -40,7 +41,8 @@ export default function App() {
         <button type="submit">Adicionar</button>
       </form>
 
-      <Footer />
+      {/* Trocamos o Footer pela tag do seu componente: */}
+      <AdicionarUsuario />
     </div>
   );
 }
