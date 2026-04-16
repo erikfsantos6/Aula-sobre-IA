@@ -1,19 +1,21 @@
-import { useState } from "react";
-import "./App.css";
+import { useState } from 'react'
+// import './App.css';
+import './style.css'
+
 // Importamos o seu componente correto aqui:
-import AdicionarUsuario from "./components/AdicionarUsuario";
+import AdicionarUsuario from './components/AdicionarUsuario';
 
 export default function App() {
-  const [nome, setNome] = useState("");
-  const [email, setEmail] = useState("");
+  const [nome, setNome] = useState('');
+  const [email, setEmail] = useState('');
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert("Torcedor cadastrado: " + nome + " (" + email + ")");
-  };
+  const handleAdicionarUsuario = (event) => {
+    e.preventDefault()
+    alert('Torcedor cadastrado: ' + nome + ' (' + email + ')')
+  }
 
   return (
-    <div className="container">
+    <div className='container'>
       <h1>Santos FC ⚽</h1>
 
       <p>
@@ -25,20 +27,20 @@ export default function App() {
 
       <form onSubmit={handleSubmit}>
         <input
-          type="text"
-          placeholder="Nome"
+          type='text'
+          placeholder='Nome'
           value={nome}
           onChange={(e) => setNome(e.target.value)}
         />
 
         <input
-          type="email"
-          placeholder="E-mail"
+          type='email'
+          placeholder='E-mail'
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
 
-        <button type="submit">Adicionar</button>
+        <button type='submit'>Adicionar</button>
       </form>
 
       {/* Trocamos o Footer pela tag do seu componente: */}
